@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.google.com/?selection.family=Londrina+Shadow|Shrikhand&query=s' rel='stylesheet' type='text/css'>
+<style>
+body{
+background:url("http://i.imgur.com/P2avCp8.jpg"); no-repeat center fixed;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+max-width:600px;
+margin:0 auto;
+}
+p {
+   font-family:forte;
+  font-size:20px;
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,1,1), rgba(0,0,3,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+div{
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 40px 0px 40px 0px;
+}
+li {
+  display:inline;
+  background:rgba(0,0,0,0.5);
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: blue;
+  margin: 60px 0 0 0;
+}
+.first{
+background-image:url("http://i.imgur.com/7TOjNAL.jpg");
+}
+.second{
+background-image:url("http://i.imgur.com/2kWC9t5.jpg");
+}
+.third{
+background-image:url("http://i.imgur.com/PiBiqji.jpg");
+}
+.price{
+float:right;
+}
+@media (max-width: 500px) {
+  li {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+</head>
+<body>
+<li>Cafee Cofffee</li>
+<div class="first">
+<p>Latte<span class="price">$18</span><br/>
+<small>A latte is an espresso and steamed milk, generally in a 1:3 to 1:5 ratio of espresso to milk, with a little foam on top. In Italy it is called caffè latte or caffelatte, which means "coffee and milk". ... Macchiato, meaning "stained", is an espresso with a dash of foamed milk
+</small></p>
+</div>
+<div class="second">
+<p>Cappuccino<span class="price">$12</span><br/>
+<small>Cappuccino is a coffee drink that today is composed of double espresso and hot milk, with the surface topped with foamed milk. Cappuccinos are most often prepared with an espresso machine
+</small></p>
+</div>
+<div class="third">
+<p>Macchiato<span class="price">$14</span><br/>
+<small>Caffè macchiato (Italian pronunciation: [kaf'f? mmak'kja?to] ( listen)), sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed
+</small></p>
+</div>
+<script>
+$('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+</body>
